@@ -1,0 +1,85 @@
+header {
+    background-color: grey;
+    height: 40px;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    margin: auto;
+    min-width: 300px;
+    max-width: 1200px;
+    width: 50vw; /* Mantém a largura base como 50% da viewport */
+    min-height: 100vh;
+}
+
+#header-conteiner {
+    margin: auto;
+    min-width: 300px;
+    max-width: 1200px;
+    width: 50vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#first-img {
+    min-width: 300px;
+    max-width: 1200px;
+    width: 50vw; /* Ajusta a largura para o 50vw da main */
+    height: auto; /* Garante que a proporção seja mantida */
+    display: block; /* Remove o espaço extra abaixo da imagem */
+    margin: 0;
+}
+
+#section-2 {
+    min-width: 300px;
+    max-width: 1200px;
+    width: 50vw; /* Ajusta a largura para o 50vw da main */
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5,1fr); /* Duas colunas iguais */
+    gap: 0; /* Sem espaçamento entre as células */
+    width: 50vw; /* Garante que a grade tenha a mesma largura da main */
+    max-width: 1200px;
+    min-width: 300px;
+    margin: auto; /* Centraliza a grade */
+}
+
+
+.grid-container  p {
+    text-align: left; /* Alinhamento do texto */
+    color: white;
+    padding: 30px; /* Ajuste o padding para controlar a altura do bloco de texto */
+    background-color: cadetblue;
+    grid-column: span 2;
+    margin: 0; /* Remove margens padrão do parágrafo */
+}
+
+.grid-container img  {
+    width: 100%;
+    height: 100%; /* Faz a imagem preencher a altura total do seu contêiner */
+    display: block; /* Remove espaço extra abaixo da imagem */
+    grid-column: span 3;
+}
+
+/* Para garantir que as "linhas" tenham a mesma altura, o conteúdo
+   (texto e imagem) precisa se ajustar. A propriedade `object-fit: cover`
+   nas imagens é crucial para que elas preencham o espaço sem distorcer.
+   O padding do `.grid-span` e a altura definida com `height: 100%`
+   ajudarão a sincronizar as alturas. */
